@@ -12,4 +12,5 @@
 #include <INTRINS.H>
 void main()
 {
+	int project1;
 }
