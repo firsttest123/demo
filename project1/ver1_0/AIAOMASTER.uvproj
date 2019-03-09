@@ -380,6 +380,9 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>documentation</GroupName>
+        </Group>
       </Groups>
     </Target>
   </Targets>
