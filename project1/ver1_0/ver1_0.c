@@ -12,5 +12,11 @@
 #include <INTRINS.H>
 void main()
 {
-	int project1;
+	int project1,x;
+	
+	do
+	{
+		x =5;
+	}while(1);
+	
 }
