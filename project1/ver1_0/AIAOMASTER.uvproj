@@ -368,6 +368,11 @@
               <FileType>1</FileType>
               <FilePath>.\ver1_0.c</FilePath>
             </File>
+            <File>
+              <FileName>keil.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\keil.txt</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
