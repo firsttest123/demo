@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        03/12/2019  10:57:45  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/05/2019  15:02:55  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -24,27 +24,22 @@ LINK MAP OF MODULE:  ver1_0_AIAOM (VER1_0)
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
             IDATA   0008H     0001H     UNIT         ?STACK
 
-            * * * * * * *  X D A T A   M E M O R Y  * * * * * * *
-            XDATA   0000H     0004H     UNIT         _XDATA_GROUP_
-
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
                     0003H     07FDH                  *** GAP ***
-            CODE    0800H     0014H     UNIT         ?PR?MAIN?VER1_0
-            CODE    0814H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0800H     000CH     UNIT         ?C_C51STARTUP
+            CODE    080CH     0001H     UNIT         ?PR?MAIN?VER1_0
 
 
 
 OVERLAY MAP OF MODULE:   ver1_0_AIAOM (VER1_0)
 
 
-SEGMENT                          XDATA_GROUP
-  +--> CALLED SEGMENT          START    LENGTH
-----------------------------------------------
-?C_C51STARTUP                  -----    -----
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
   +--> ?PR?MAIN?VER1_0
-
-?PR?MAIN?VER1_0                0000H    0004H
 
 
 
@@ -59,32 +54,25 @@ SYMBOL TABLE OF MODULE:  ver1_0_AIAOM (VER1_0)
   D:00A8H         PUBLIC        IE
   D:00D8H         PUBLIC        PCA0CN
   D:00B8H         PUBLIC        IP
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/12/2019  10:57:45  PAGE 2
-
-
   D:00C0H         PUBLIC        SMB0CN
-  C:0800H         PUBLIC        main
+  C:080CH         PUBLIC        main
   D:00F8H         PUBLIC        SPI0CN
   D:0088H         PUBLIC        TCON
   D:0098H         PUBLIC        SCON0
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/05/2019  15:02:55  PAGE 2
+
+
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          MAIN
-  -------         DO            
-  X:0000H         SYMBOL        project1
-  X:0002H         SYMBOL        x
-  -------         ENDDO         
-  C:0800H         LINE#         10
-  C:0800H         LINE#         11
-  C:0800H         LINE#         15
-  C:0800H         LINE#         16
-  C:0809H         LINE#         17
-  C:0812H         LINE#         18
+  C:080CH         LINE#         13
+  C:080CH         LINE#         14
+  C:080CH         LINE#         15
   -------         ENDPROC       MAIN
   -------         ENDMOD        VER1_0
 
   -------         MODULE        ?C_STARTUP
-  C:0814H         SEGMENT       ?C_C51STARTUP
+  C:0800H         SEGMENT       ?C_C51STARTUP
   I:0008H         SEGMENT       ?STACK
   C:0000H         PUBLIC        ?C_STARTUP
   D:00E0H         SYMBOL        ACC
@@ -94,7 +82,7 @@ SYMBOL TABLE OF MODULE:  ver1_0_AIAOM (VER1_0)
   N:0000H         SYMBOL        IBPSTACK
   N:0100H         SYMBOL        IBPSTACKTOP
   N:0080H         SYMBOL        IDATALEN
-  C:0817H         SYMBOL        IDATALOOP
+  C:0803H         SYMBOL        IDATALOOP
   N:0000H         SYMBOL        PBPSTACK
   N:0000H         SYMBOL        PBPSTACKTOP
   N:0000H         SYMBOL        PDATALEN
@@ -103,26 +91,23 @@ SYMBOL TABLE OF MODULE:  ver1_0_AIAOM (VER1_0)
   N:0000H         SYMBOL        PPAGEENABLE
   D:00A0H         SYMBOL        PPAGE_SFR
   D:0081H         SYMBOL        SP
-  C:0814H         SYMBOL        STARTUP1
+  C:0800H         SYMBOL        STARTUP1
   N:0000H         SYMBOL        XBPSTACK
   N:0000H         SYMBOL        XBPSTACKTOP
   N:0000H         SYMBOL        XDATALEN
   N:0000H         SYMBOL        XDATASTART
   C:0000H         LINE#         92
-  C:0814H         LINE#         99
-  C:0816H         LINE#         100
-  C:0817H         LINE#         101
-  C:0818H         LINE#         102
-  C:081AH         LINE#         151
-  C:081DH         LINE#         155
+  C:0800H         LINE#         99
+  C:0802H         LINE#         100
+  C:0803H         LINE#         101
+  C:0804H         LINE#         102
+  C:0806H         LINE#         151
+  C:0809H         LINE#         155
   -------         ENDMOD        ?C_STARTUP
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0023H BYTE ( 1%) *
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/12/2019  10:57:45  PAGE 3
-
-
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0010H BYTE ( 0%) *
 ******************************************************************************
 
-Program Size: data=9.0 xdata=4 code=35
+Program Size: data=9.0 xdata=0 code=16
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
