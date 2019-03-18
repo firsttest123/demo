@@ -1,6 +1,0 @@
-"ver1_0.obj",
-".\STARTUP.obj" 
-TO "ver6_1_0_AIAOM" 
-RAMSIZE(256) 
-CODE( 0X0000-0XFFFF )
-XDATA( 0X0000-0X0FFF )
