@@ -1,7 +1,0 @@
-yellow
-rainbow 
-unicorn
-blue
-black
-red
-this is updated new branch 
